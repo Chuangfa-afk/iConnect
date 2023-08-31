@@ -1,0 +1,51 @@
+{
+    "name": "iConnect",
+    "description": "A connection link to Blackboard and Brightspace",
+    "version": "1.0.8",
+    "manifest_version": 2,
+    "icons": {
+        "16":"/images/linode.png",
+        "32":"/images/linode.png",
+        "48":"/images/linode.png",
+        "128":"/images/linode.png"
+    },
+    "background": {
+        "scripts": []
+    },
+    "content_scripts":[
+        {
+            "matches": ["https://blackboard.stonybrook.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_1_1"], 
+            "js": ["jquery.js", "contentScriptBB.js"],
+            "run_at":"document_end"
+        },
+    
+        {
+            "matches": ["https://mycourses.stonybrook.edu/d2l/home/*"], 
+            "js": ["jquery.js", "contentScriptBS_course.js"],
+            "run_at":"document_end"
+        },
+        {
+            "matches": ["https://mycourses.stonybrook.edu/d2l/home"], 
+            "js": ["jquery.js", "contentScriptBS.js"],
+            "run_at":"document_end"
+        }
+    ],
+    "browser_action": {
+        "default_icon": "/images/linode.png",
+        "default_popup": "popup.html"
+    },
+    "permissions":[
+        "tabs",
+        "activeTab",
+        "http://*/*",
+        "clipboardRead",
+        "clipboardWrite",
+        "unlimitedStorage",
+        "storage"
+
+    ],
+    "content_security_policy": 
+    "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
+
+}
+    

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <meta charset="UTF-8" />
+    <!--
+        CSS
+    -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        list-style: none;
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+        font-size: 12px;
+        margin: 3px;
+        padding-bottom: 10px;
+        background: url(./images/bg-tile.png);
+      }
+      .main {
+        margin: auto;
+      }
+      .data {
+        width: 8px;
+        margin: auto;
+      }
+      .header,
+      .nav,
+      .container,
+      .footer {
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .header {
+        background: #23232e;
+        padding: 30px;
+        text-align:center;
+        font-family: sans-serif;
+      }
+      .heading {
+        
+      }
+      .nav {
+        background: #333;
+      }
+      .nav a {
+        color: aliceblue;
+        padding: 10px 20px;
+        display: inline-block;
+      }
+      .nav a:hover {
+        background: #bbb;
+        color: black;
+      }
+      .lside {
+        width: 200px;
+        float: left;
+      }
+      .rside {
+        width: 200px;
+        float: right;
+      }
+      .content {
+        margin: 0px, 205px;
+      }
+      .lside,
+      .rside,
+      .content {
+        padding: 5px;
+        box-sizing: border-box;
+      }
+      .footer {
+        padding: 10px;
+        background: #ccc;
+        text-align: center;
+      }
+      .styled-table {
+        border-collapse: collapse;
+        margin: 50px 0px;
+        font-size: 1em;
+        font-family: sans-serif;
+        min-width: 800px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        width: 100%;
+
+      }
+      .styled-table thead tr {
+        background-color: #23232e;
+        color: #ffffff;
+        text-align: left;
+      }
+      th {
+        font-size: 15px;
+        height: 50px;
+        width: 40%;
+      }
+      .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+        text-align: left;
+        font-size: 15px;
+        height: 50px;
+        width: 40%;
+      }
+
+      .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+      }
+
+      .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #23232e;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 15px;
+      }
+      .styled-table tbody tr.active-row {
+        color: #23232e;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      .demo1 {
+        font-size: medium;
+        color: white;
+      }
+
+      .middle {
+        align-items: center;
+        justify-content:left;
+      }
+      .scoreboardTable {
+        padding: 0;
+        margin: auto;
+        border-collapse: collapse;
+        width: 80%;
+        text-align: center;
+        color: whitesmoke;
+      }
+      .scoreboardTableHeaderRow {
+        color: darkorange;
+        font-weight: bold;
+        height: 50px;
+      }
+      .scoreboardTableBodyRow:nth-child(odd) {
+        background-color: rgba(128, 128, 128, 0.05);
+      }
+      #latestUserScore {
+        background-color: crimson;
+      }
+      .scoreboardTableBodyRow:hover {
+        background-color: darkorange;
+      }
+      .scoreboardTable tr td {
+        height: 25px;
+      }
+      .grid-container {
+        display: inline-grid;
+        grid-template-columns: auto auto auto;
+      }
+      .grid-item-left {
+        display: flex;
+        align-items: center;
+        justify-content:left;
+      }
+      .grid-item-center {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+      }
+      .grid-item-right {
+        display: flex;
+        align-items:center;
+        justify-content:right; 
+      }
+
+      .grid-container-rows {
+        display: inline-grid;
+        grid-template-rows: auto auto auto;
+        justify-content: right;
+      }
+      .grid-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-style: solid;
+        border-radius: 10px;
+        border-width: 2px;
+        border-color: white;
+        padding: 10px;
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
+      }
+      .grid-item:hover {
+        opacity: 0.4;
+      }
+      .demo2 {
+        font-size: 65px;
+        color: white;
+      }
+      .demo3 {
+        font-size: xx-large;
+        color:#23232e;
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-top: 50px;
+      }
+
+    </style>
+    <title>Student Page</title>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="header grid-container">
+        <div class="grid-item-left">
+          <img src="./images/linode-white.svg" height="150" width="150">
+        </div>
+        <div class="grid-item-center">
+          <a class="demo2">
+            Assignments
+          </a>
+        </div>
+        <div class="grid-item-right grid-container-rows">
+          <div class="grid-item">
+            <a class="demo1" href="mainPage.html" style="float: right">
+              Homepage
+            </a>
+          </div>
+          <div class="grid-item">
+            <a class="demo1" target="_blank" rel="noopener noreferrer" id="link" href="https://mycourses.stonybrook.edu/" style="float: right">
+              Update
+            </a>
+          </div>
+          <div class="grid-item">
+            <a class="demo1" href="chat.html" style="float: right">
+              EzChat
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="table-div">
+      <h1 class="demo3" style="float:left">Tasks</h1>
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Class Name</th>
+            <th>Assignment</th>
+            <th>Due date</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+
+
+      <h1 class="demo3" style="float:left">Grades</h1>
+      <table class="styled-table">
+        <thead class="grade-thead">
+          <tr class="grade-tr" >
+            <th class="grade-th" id="grade-class">Class Name</th>
+            <th class="grade-th" id="grade-assignment">Assignment</th>
+            <th class="grade-th" id="grade-grade" >Grade</th>
+          </tr>
+        </thead>
+        <tbody class="grade-tbody">
+        </tbody>
+      </table>
+    </div>
+  </body>
+  <script src="assignment.js"></script>
+</html>
